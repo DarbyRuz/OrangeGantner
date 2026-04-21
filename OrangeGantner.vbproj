@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{327BBE54-3AA2-4133-AB21-62C57C01C3BA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>OrangeGantner.My.MyApplication</StartupObject>
+    <RootNamespace>OrangeGantner</RootNamespace>
+    <AssemblyName>OrangeGantner</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Ruzanna\Documents\HDM_Orange\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>OrangeFitness</ProductName>
+    <PublisherName>Ruzanna</PublisherName>
+    <SuiteName>Darbinyan</SuiteName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>OrangeGantner.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseWinFormsOutOfProcDesigner>True</UseWinFormsOutOfProcDesigner>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>OrangeGantner.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseWinFormsOutOfProcDesigner>True</UseWinFormsOutOfProcDesigner>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>fitness.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5A21B8A5A7C0CD30DE5481F14D74E7F8CC7F3733</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>OrangeGantner_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.GAT_Writer_5250, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\AxInterop.GAT_Writer_5250.dll</HintPath>
+    </Reference>
+    <Reference Include="DataGridViewAutoFilter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DataGridView-AutoFilter.1.1.0\lib\net20\DataGridViewAutoFilter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HDMIntegrator">
+      <HintPath>..\..\..\..\Program Files (x86)\Ruz Darby\OrangeFitness\HDMIntegrator.dll</HintPath>
+    </Reference>
+    <Reference Include="HDMPrint, Version=1.3.0.5, Culture=neutral, PublicKeyToken=a6fa64a4a349ab85, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Ruzanna\hdm\HDMPrint.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.GAT_Writer_5250, Version=2.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>.\Interop.GAT_Writer_5250.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\Documents\Visual Studio 2015\Projects\incourtFit\bin\Debug\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="TouchlessLib">
+      <HintPath>.\TouchlessLib.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="HDMPrint" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="AutoCompleteCombo.vb" />
+    <Compile Include="CardReaderManager.vb" />
+    <Compile Include="Clip.vb" />
+    <Compile Include="ComplexReader.vb" />
+    <Compile Include="Component1.Designer.vb">
+      <DependentUpon>Component1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Component1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cust.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExceptionList.Designer.vb">
+      <DependentUpon>ExceptionList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ExceptionList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.vb">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCamera.designer.vb">
+      <DependentUpon>frmCamera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCamera.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHDMsettings.Designer.vb">
+      <DependentUpon>frmHDMsettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHDMsettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPosPrinterSetting.designer.vb">
+      <DependentUpon>frmPosPrinterSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPosPrinterSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrint.Designer.vb">
+      <DependentUpon>frmPrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrint.vb" />
+    <Compile Include="frmProfile.Designer.vb">
+      <DependentUpon>frmProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassOrder.vb" />
+    <Compile Include="Customer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DbConnection.vb" />
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HdmClass.vb" />
+    <Compile Include="HDMitems.vb" />
+    <Compile Include="History.Designer.vb">
+      <DependentUpon>History.vb</DependentUpon>
+    </Compile>
+    <Compile Include="History.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModClasses.vb" />
+    <Compile Include="Money.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewCoach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderDetails.vb" />
+    <Compile Include="Profile1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RESTORAN.designer.vb">
+      <DependentUpon>RESTORAN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RESTORAN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RestoranPrint.Designer.vb">
+      <DependentUpon>RestoranPrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RestoranPrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInteractions.designer.vb">
+      <DependentUpon>frmInteractions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInteractions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSqlConn.vb" />
+    <Compile Include="GlobalVariables.vb" />
+    <Compile Include="interactions.vb" />
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module2.vb" />
+    <Compile Include="MoneyByDate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Order.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="outPayments.designer.vb">
+      <DependentUpon>outPayments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="outPayments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentPurpose.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REPORTS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPA_products.designer.vb">
+      <DependentUpon>SPA_products.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SPA_products.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartForm.Designer.vb">
+      <DependentUpon>StartForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StartForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TariffNameCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TariffType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnionTotalPay.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Cust.resx">
+      <DependentUpon>Cust.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer.resx">
+      <DependentUpon>Customer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExceptionList.resx">
+      <DependentUpon>ExceptionList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCamera.resx">
+      <DependentUpon>frmCamera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHDMsettings.resx">
+      <DependentUpon>frmHDMsettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPosPrinterSetting.resx">
+      <DependentUpon>frmPosPrinterSetting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrint.resx">
+      <DependentUpon>frmPrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProfile.resx">
+      <DependentUpon>frmProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="History.resx">
+      <DependentUpon>History.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Money.resx">
+      <DependentUpon>Money.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="NewCoach.resx">
+      <DependentUpon>NewCoach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile1.resx">
+      <DependentUpon>Profile1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RESTORAN.resx">
+      <DependentUpon>RESTORAN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RestoranPrint.resx">
+      <DependentUpon>RestoranPrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImage.resx">
+      <DependentUpon>FormImage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInteractions.resx">
+      <DependentUpon>frmInteractions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoneyByDate.resx">
+      <DependentUpon>MoneyByDate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order.resx">
+      <DependentUpon>Order.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="outPayments.resx">
+      <DependentUpon>outPayments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentPurpose.resx">
+      <DependentUpon>PaymentPurpose.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentType.resx">
+      <DependentUpon>PaymentType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product.resx">
+      <DependentUpon>Product.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductType.resx">
+      <DependentUpon>ProductType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReOrder.resx">
+      <DependentUpon>ReOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTS.resx">
+      <DependentUpon>REPORTS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPA_products.resx">
+      <DependentUpon>SPA_products.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm.resx">
+      <DependentUpon>StartForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TariffNameCategory.resx">
+      <DependentUpon>TariffNameCategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TariffType.resx">
+      <DependentUpon>TariffType.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\FITNESSEntities1.datasource" />
+    <None Include="My Project\DataSources\FITNESSEntities2.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Interop.GAT_Writer_5250.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="OrangeGantner_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Resources\9.png" />
+    <None Include="Resources\1.png" />
+    <None Include="1 %286%29.png" />
+    <Content Include="fitness.ico" />
+    <Content Include="GATWriter5250.ocx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HDMPrint.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="System\Windows\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
