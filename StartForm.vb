@@ -368,7 +368,7 @@ Public Class StartForm
 	Private Sub StartForm_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
 		InitCardReader()
 		If Label6.Text = "3" Or Label6.Text = "7" Then
-			Button2.Enabled = False
+			Button2.Enabled = True
 			Button3.Enabled = False
 			Button4.Enabled = False
 			Button5.Enabled = False

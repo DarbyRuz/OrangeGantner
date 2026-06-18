@@ -9525,7 +9525,6 @@ e As DataGridViewDataErrorEventArgs) _
 			If AdminByReason("new clip") = True Then
 				Dim custID As Integer = CInt(txtCustid.Text)
 
-
 				ReadyConnectionF()
 				Dim cb As String = "insert into ClipNew(clid,customerid,coachid,productid,quantity,regdate,duration,amount) VALUES (@d1,@d2,@d3,@d4,@d5,@d6,@d7,@d8)"
 				Dim cmd = New SqlCommand(cb)
@@ -9535,7 +9534,12 @@ e As DataGridViewDataErrorEventArgs) _
 				cmd.Parameters.AddWithValue("@d3", txtCoachId.Text)
 				cmd.Parameters.AddWithValue("@d4", txtPrId.Text)
 				cmd.Parameters.AddWithValue("@d5", txtFree.Text)
-				cmd.Parameters.AddWithValue("@d6", DateTime.Now)
+				If Label38.Text = "4" Or Label38.Text = "10" Then
+					cmd.Parameters.AddWithValue("@d6", dtpDate.Value)
+				Else
+					cmd.Parameters.AddWithValue("@d6", DateTime.Now)
+				End If
+
 				cmd.Parameters.AddWithValue("@d7", txtUsed.Text)
 				cmd.Parameters.AddWithValue("@d8", txtAmount.Text)
 				cmd.ExecuteReader()
@@ -9855,7 +9859,7 @@ e As DataGridViewDataErrorEventArgs) _
 		a = a + GetCustomerByID(custID).LastName & Space(2) & GetCustomerByID(custID).FirstName & vbCrLf & vbCrLf
 		a = a + "Coach" & Space(5) & cmbCoach.Text & vbCrLf & vbCrLf
 		a = a + cmbProd.Text & vbCrLf & vbCrLf
-		a = a + "Balance" & Space(2) & Balance & vbCrLf & vbCrLf & "End Date" & Space(2) & EDate
+		a = a + "Balance" & Space(2) & Balance & vbCrLf & vbCrLf & "End Date" & Space(2) & EDate.AddDays(-1).ToString
 		Dim psz As New PaperSize
 
 
